@@ -1,0 +1,5 @@
+#!/bin/bash
+
+version=$(git describe)
+docker tag $IMAGE_NAME $DOCKER_REPO:$version
+docker push $DOCKER_REPO:$version

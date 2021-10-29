@@ -1,0 +1,32 @@
+{
+  "token_acc":1.0,
+  "token_p":1.0,
+  "token_r":1.0,
+  "token_f":1.0,
+  "cats_score":0.9398351092,
+  "cats_score_desc":"macro F",
+  "cats_micro_p":0.9454166667,
+  "cats_micro_r":0.9454166667,
+  "cats_micro_f":0.9454166667,
+  "cats_macro_p":0.9323384988,
+  "cats_macro_r":0.949375,
+  "cats_macro_f":0.9398351092,
+  "cats_macro_auc":0.98895625,
+  "cats_f_per_type":{
+    "RELEVANT":{
+      "p":0.8849252014,
+      "r":0.96125,
+      "f":0.9215098862
+    },
+    "IRRELEVANT":{
+      "p":0.9797517962,
+      "r":0.9375,
+      "f":0.9581603322
+    }
+  },
+  "cats_auc_per_type":{
+    "RELEVANT":0.98895625,
+    "IRRELEVANT":0.98895625
+  },
+  "speed":19155.9340490853
+}

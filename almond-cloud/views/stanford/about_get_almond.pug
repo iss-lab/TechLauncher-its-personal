@@ -1,0 +1,93 @@
+extends ../layout
+
+block page_name
+  = _("Get Genie")
+
+block content
+  div.row
+    div.col-md-6
+      div.panel.panel-default
+        div.panel-heading
+          h2.panel-title= _("Web Genie")
+
+        div.panel-body
+          p
+            = _("Web Genie gives you the full power of a personal virtual assistant, without leaving the browser.")
+          p
+            small!= _('Web Genie is provided free of charge to the research community. Use of Web Genie is subject to our <a href="/about/privacy">Privacy Policy</a>.')
+
+          if authenticated
+            a(href='/me').btn.btn-primary.custom-btn.col-md-offset-4= _("Go To Web Genie")
+          else
+            a(href='/user/register').btn.btn-primary.custom-btn.col-md-offset-4= _("Create An Account")
+
+    div.col-md-6
+      div.panel.panel-default
+        div.panel-heading
+          h2.panel-title= _("Genie on your Laptop")
+
+        div.panel-body
+          p
+            = _("Genie is also available as a native application for the GNOME desktop environment.")
+            |
+            |
+            != _('Use <a href="/thingpedia/devices/by-id/org.thingpedia.builtin.thingengine.gnome">Genie 4 GNOME</a> to open apps and documents, take screenshots, change settings and lock your PC automatically.')
+
+          p
+            a(href='https://flathub.org/apps/details/edu.stanford.Genie')
+              img(width='200',alt=_("Download on Flathub"),src="https://flathub.org/assets/badges/flathub-badge-en.png")
+
+    div.col-md-6.col-md-offset-3
+      div.panel.panel-default
+        div.panel-heading
+          h2.panel-title= _("Almond for Home Assistant")
+
+        div.panel-body
+          p
+            = _("Almond is also available as an officially-supported add-on for Home Assistant. You can enable it in one click from the add-on store.")
+            |
+            |
+            = _("In Home Assistant, Almond can be used with a microphone and speaker to build a fully functional smart speaker.")
+            |
+            |
+            = _("All your data and credentials are stored only on your device, ensuring the maximum level of privacy.")
+
+          p
+            a(href='https://my.home-assistant.io/redirect/supervisor_addon_store/')
+              img(alt='My Home Assistant Add-on Store',src='https://my.home-assistant.io/badges/supervisor_addon_store.svg',style='width:240px')
+
+
+    //-div.col-md-6.col-md-offset-3
+      div.panel.panel-default
+        div.panel-heading
+          h2.panel-title= _("Genie for Android")
+
+        div.panel-body
+          p
+            = _("A beta version of the Genie app is also available as a native Android application.")
+            |
+            |
+            = _("When you install Genie on your Android phone, all your data and credentials are stored only on your device.")
+            |
+            |
+            = _("This ensures the maximum level of privacy, without sacrificing the convenience of having Genie always with you.")
+
+          p
+            a(href='https://play.google.com/store/apps/details?id=edu.stanford.thingengine.engine&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1')
+              img(alt='Get it on Google Play',src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png',style='width:240px')
+
+          p
+            small= _("Google Play and the Google Play logo are trademarks of Google LLC.")
+
+  div.row
+    div.col-md-12
+      div.panel.panel-default
+        div.panel-heading
+          h2.panel-title= _("Other Download Options")
+
+        div.panel-body
+          p
+            = _("Still have not found what your looking for?")
+            |
+            |
+            != _("Check out Genie\'s source code in our <a href='https://github.com/stanford-oval'>Github page</a>.")

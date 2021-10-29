@@ -1,0 +1,1342 @@
+{
+  "result": "ok",
+  "data": [
+    {
+      "type": "Henry.twitter:tweet",
+      "name": "Twitter Tweet ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "almond.sports:am_soccer_leagues",
+      "name": "Sportradar American Soccer Leagues",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "almond.sports:eu_soccer_leagues",
+      "name": "Sportradar European Soccer Leagues",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "almond.sports:nhl_team",
+      "name": "Sportradar NHL Team",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "com.facebook:id",
+      "name": "Facebook post ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.gmail:email_id",
+      "name": "GMail Email ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.gmail:thread_id",
+      "name": "GMail Thread ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.google.contacts:contact_name",
+      "name": "Name of a contact in Google Contacts",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.google.drive:file_id",
+      "name": "Google Drive File ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.icanhazdadjoke:id",
+      "name": "Joke ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.imgur:album_id",
+      "name": "Imgur Album ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.instagram:filter_",
+      "name": "Instagram Filter",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "com.live.onedrive:file_id",
+      "name": "OneDrive File ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.live.onedrive:user_id",
+      "name": "OneDrive User ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.smartnews:article",
+      "name": "News Articles on SmartNews",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.spotify:album",
+      "name": "Albums on Spotify",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": "com.spotify:playable"
+    },
+    {
+      "type": "com.spotify:artist",
+      "name": "Artists on Spotify",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "com.spotify:device",
+      "name": "Spotify Connect device ID",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "com.spotify:playable",
+      "name": "Playable content on Spotify",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "com.spotify:playlist",
+      "name": "Playlists on Spotify",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": "com.spotify:playable"
+    },
+    {
+      "type": "com.spotify:show",
+      "name": "Shows on Spotify",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": "com.spotify:playable"
+    },
+    {
+      "type": "com.spotify:song",
+      "name": "Songs on Spotify",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": "com.spotify:playable"
+    },
+    {
+      "type": "com.steampowered:user_id",
+      "name": "Steam User ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.thecatapi:cat",
+      "name": "Identifier of a Cat Picture",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.thecatapi:image_id",
+      "name": "The Cat API Image ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.thedogapi:dog",
+      "name": "Identifier of a Dog Picture",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "com.twitter:id",
+      "name": "Twitter API ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.twitters:tweet",
+      "name": "Twitter Tweet ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.yelp:restaurant",
+      "name": "Restaurants on Yelp",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "com.yelp:restaurant_cuisine",
+      "name": "Cuisines in Yelp",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "com.youtube:channel_id",
+      "name": "YouTube Channel ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "com.youtube:video_id",
+      "name": "YouTube Video ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "dogapi:image_id",
+      "name": "The Dog API Image ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.akirjner:Hotel",
+      "name": "edu.stanford.cs294s.akirjner:Hotel",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.akirjner:LocalBusiness",
+      "name": "edu.stanford.cs294s.akirjner:LocalBusiness",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.akirjner:LocationFeatureSpecification",
+      "name": "edu.stanford.cs294s.akirjner:LocationFeatureSpecification",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.akirjner:LodgingBusiness",
+      "name": "edu.stanford.cs294s.akirjner:LodgingBusiness",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.akirjner:Organization",
+      "name": "edu.stanford.cs294s.akirjner:Organization",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.akirjner:Place",
+      "name": "edu.stanford.cs294s.akirjner:Place",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.akirjner:Thing",
+      "name": "edu.stanford.cs294s.akirjner:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.allenhw1:CreativeWork",
+      "name": "edu.stanford.cs294s.allenhw1:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.allenhw1:FoodEstablishment",
+      "name": "edu.stanford.cs294s.allenhw1:FoodEstablishment",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.allenhw1:LocalBusiness",
+      "name": "edu.stanford.cs294s.allenhw1:LocalBusiness",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.allenhw1:Organization",
+      "name": "edu.stanford.cs294s.allenhw1:Organization",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.allenhw1:Person",
+      "name": "edu.stanford.cs294s.allenhw1:Person",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.allenhw1:Place",
+      "name": "edu.stanford.cs294s.allenhw1:Place",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.allenhw1:Restaurant",
+      "name": "edu.stanford.cs294s.allenhw1:Restaurant",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.allenhw1:Review",
+      "name": "edu.stanford.cs294s.allenhw1:Review",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.allenhw1:Thing",
+      "name": "edu.stanford.cs294s.allenhw1:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.emilyw12:CreativeWork",
+      "name": "edu.stanford.cs294s.emilyw12:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.emilyw12:HowTo",
+      "name": "edu.stanford.cs294s.emilyw12:HowTo",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.emilyw12:Person",
+      "name": "edu.stanford.cs294s.emilyw12:Person",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.emilyw12:Recipe",
+      "name": "edu.stanford.cs294s.emilyw12:Recipe",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.emilyw12:Review",
+      "name": "edu.stanford.cs294s.emilyw12:Review",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.emilyw12:Thing",
+      "name": "edu.stanford.cs294s.emilyw12:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.esther21:CreativeWork",
+      "name": "edu.stanford.cs294s.esther21:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.esther21:HowTo",
+      "name": "edu.stanford.cs294s.esther21:HowTo",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.esther21:Person",
+      "name": "edu.stanford.cs294s.esther21:Person",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.esther21:Recipe",
+      "name": "edu.stanford.cs294s.esther21:Recipe",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.esther21:Review",
+      "name": "edu.stanford.cs294s.esther21:Review",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.esther21:Thing",
+      "name": "edu.stanford.cs294s.esther21:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.hdebalsi:CreativeWork",
+      "name": "edu.stanford.cs294s.hdebalsi:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.hdebalsi:LocalBusiness",
+      "name": "edu.stanford.cs294s.hdebalsi:LocalBusiness",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.hdebalsi:Organization",
+      "name": "edu.stanford.cs294s.hdebalsi:Organization",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.hdebalsi:Person",
+      "name": "edu.stanford.cs294s.hdebalsi:Person",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.hdebalsi:Place",
+      "name": "edu.stanford.cs294s.hdebalsi:Place",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.hdebalsi:Review",
+      "name": "edu.stanford.cs294s.hdebalsi:Review",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.hdebalsi:Thing",
+      "name": "edu.stanford.cs294s.hdebalsi:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:CreativeWork",
+      "name": "edu.stanford.cs294s.kearns:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:Intangible",
+      "name": "edu.stanford.cs294s.kearns:Intangible",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:ItemList",
+      "name": "edu.stanford.cs294s.kearns:ItemList",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:MusicAlbum",
+      "name": "edu.stanford.cs294s.kearns:MusicAlbum",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:MusicGroup",
+      "name": "edu.stanford.cs294s.kearns:MusicGroup",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:MusicPlaylist",
+      "name": "edu.stanford.cs294s.kearns:MusicPlaylist",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:MusicRecording",
+      "name": "edu.stanford.cs294s.kearns:MusicRecording",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:Organization",
+      "name": "edu.stanford.cs294s.kearns:Organization",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:OrganizationRole",
+      "name": "edu.stanford.cs294s.kearns:OrganizationRole",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:PerformingGroup",
+      "name": "edu.stanford.cs294s.kearns:PerformingGroup",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:Person",
+      "name": "edu.stanford.cs294s.kearns:Person",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:Role",
+      "name": "edu.stanford.cs294s.kearns:Role",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.kearns:Thing",
+      "name": "edu.stanford.cs294s.kearns:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.mehrad:Hotel",
+      "name": "edu.stanford.cs294s.mehrad:Hotel",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.mehrad:LocalBusiness",
+      "name": "edu.stanford.cs294s.mehrad:LocalBusiness",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.mehrad:LocationFeatureSpecification",
+      "name": "edu.stanford.cs294s.mehrad:LocationFeatureSpecification",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.mehrad:LodgingBusiness",
+      "name": "edu.stanford.cs294s.mehrad:LodgingBusiness",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.mehrad:Organization",
+      "name": "edu.stanford.cs294s.mehrad:Organization",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.mehrad:Place",
+      "name": "edu.stanford.cs294s.mehrad:Place",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.mehrad:Thing",
+      "name": "edu.stanford.cs294s.mehrad:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.minecraft:Thing",
+      "name": "edu.stanford.cs294s.minecraft:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.nkona:CreativeWork",
+      "name": "edu.stanford.cs294s.nkona:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.nkona:HowTo",
+      "name": "edu.stanford.cs294s.nkona:HowTo",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.nkona:Person",
+      "name": "edu.stanford.cs294s.nkona:Person",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.nkona:Recipe",
+      "name": "edu.stanford.cs294s.nkona:Recipe",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.nkona:Review",
+      "name": "edu.stanford.cs294s.nkona:Review",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.nkona:Thing",
+      "name": "edu.stanford.cs294s.nkona:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.nseay:CreativeWork",
+      "name": "edu.stanford.cs294s.nseay:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.nseay:HowTo",
+      "name": "edu.stanford.cs294s.nseay:HowTo",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.nseay:Person",
+      "name": "edu.stanford.cs294s.nseay:Person",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.nseay:Recipe",
+      "name": "edu.stanford.cs294s.nseay:Recipe",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.nseay:Review",
+      "name": "edu.stanford.cs294s.nseay:Review",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.nseay:Thing",
+      "name": "edu.stanford.cs294s.nseay:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.riyav:CreativeWork",
+      "name": "edu.stanford.cs294s.riyav:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.riyav:HowTo",
+      "name": "edu.stanford.cs294s.riyav:HowTo",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.riyav:Person",
+      "name": "edu.stanford.cs294s.riyav:Person",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.riyav:Recipe",
+      "name": "edu.stanford.cs294s.riyav:Recipe",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.riyav:Review",
+      "name": "edu.stanford.cs294s.riyav:Review",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.riyav:Thing",
+      "name": "edu.stanford.cs294s.riyav:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.s-jse:CreativeWork",
+      "name": "edu.stanford.cs294s.s-jse:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.s-jse:FoodEstablishment",
+      "name": "edu.stanford.cs294s.s-jse:FoodEstablishment",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.s-jse:LocalBusiness",
+      "name": "edu.stanford.cs294s.s-jse:LocalBusiness",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.s-jse:Organization",
+      "name": "edu.stanford.cs294s.s-jse:Organization",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.s-jse:Person",
+      "name": "edu.stanford.cs294s.s-jse:Person",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.s-jse:Place",
+      "name": "edu.stanford.cs294s.s-jse:Place",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.s-jse:Restaurant",
+      "name": "edu.stanford.cs294s.s-jse:Restaurant",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.s-jse:Review",
+      "name": "edu.stanford.cs294s.s-jse:Review",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.s-jse:Thing",
+      "name": "edu.stanford.cs294s.s-jse:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojk:CreativeWork",
+      "name": "edu.stanford.cs294s.satojk:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojk:Intangible",
+      "name": "edu.stanford.cs294s.satojk:Intangible",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojk:ItemList",
+      "name": "edu.stanford.cs294s.satojk:ItemList",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojk:ListItem",
+      "name": "edu.stanford.cs294s.satojk:ListItem",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojk:MusicAlbum",
+      "name": "edu.stanford.cs294s.satojk:MusicAlbum",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojk:MusicGroup",
+      "name": "edu.stanford.cs294s.satojk:MusicGroup",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojk:MusicPlaylist",
+      "name": "edu.stanford.cs294s.satojk:MusicPlaylist",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojk:MusicRecording",
+      "name": "edu.stanford.cs294s.satojk:MusicRecording",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojk:Organization",
+      "name": "edu.stanford.cs294s.satojk:Organization",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojk:PerformingGroup",
+      "name": "edu.stanford.cs294s.satojk:PerformingGroup",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojk:Thing",
+      "name": "edu.stanford.cs294s.satojk:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojkfinal:CreativeWork",
+      "name": "edu.stanford.cs294s.satojkfinal:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojkfinal:MusicGroup",
+      "name": "edu.stanford.cs294s.satojkfinal:MusicGroup",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojkfinal:MusicRecording",
+      "name": "edu.stanford.cs294s.satojkfinal:MusicRecording",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojkfinal:Organization",
+      "name": "edu.stanford.cs294s.satojkfinal:Organization",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojkfinal:PerformingGroup",
+      "name": "edu.stanford.cs294s.satojkfinal:PerformingGroup",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.satojkfinal:Thing",
+      "name": "edu.stanford.cs294s.satojkfinal:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.sbenavid:Person",
+      "name": "edu.stanford.cs294s.sbenavid:Person",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.sierra:Book",
+      "name": "edu.stanford.cs294s.sierra:Book",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.sierra:CreativeWork",
+      "name": "edu.stanford.cs294s.sierra:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.sierra:Person",
+      "name": "edu.stanford.cs294s.sierra:Person",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.sierra:Thing",
+      "name": "edu.stanford.cs294s.sierra:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.silei:CreativeWork",
+      "name": "edu.stanford.cs294s.silei:CreativeWork",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.silei:FoodEstablishment",
+      "name": "edu.stanford.cs294s.silei:FoodEstablishment",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.silei:HowTo",
+      "name": "edu.stanford.cs294s.silei:HowTo",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.silei:LocalBusiness",
+      "name": "edu.stanford.cs294s.silei:LocalBusiness",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.silei:Organization",
+      "name": "edu.stanford.cs294s.silei:Organization",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.silei:Person",
+      "name": "edu.stanford.cs294s.silei:Person",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.silei:Place",
+      "name": "edu.stanford.cs294s.silei:Place",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.silei:Recipe",
+      "name": "edu.stanford.cs294s.silei:Recipe",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.silei:Restaurant",
+      "name": "edu.stanford.cs294s.silei:Restaurant",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.silei:Review",
+      "name": "edu.stanford.cs294s.silei:Review",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "edu.stanford.cs294s.silei:Thing",
+      "name": "edu.stanford.cs294s.silei:Thing",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "gov.nasa:asteroid_id",
+      "name": "NASA Asteroid ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "gov.nasa:curiosity_rover_camera",
+      "name": "NASA Curiosity Rover Camera Identifier",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "hamza.thecatapi:cat",
+      "name": "Identifier of a Cat Picture",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "imgflip:meme_id",
+      "name": "Imgflip Meme ID",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "instagram:media_id",
+      "name": "Instagram Media ID",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "omlet:feed_id",
+      "name": "Omlet Feed",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "org.arxiv:category",
+      "name": "ArXiv Category",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "org.freedesktop:app_id",
+      "name": "Freedesktop App Identifier",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "org.itspersonal.newsfilter:training_news_article",
+      "name": "News Article on Its Personal News Filter",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "org.wikidata:human",
+      "name": "ID of humans in wikidata (99794 persons included)",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "org.wikidata:league",
+      "name": "ID of sports leagues in wikidata (214 leagues included)",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "rest.kanye:id",
+      "name": "Quote ID from kanye.rest API",
+      "is_well_known": 0,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "sportradar:eu_soccer_team",
+      "name": "Sportradar European Soccer Team",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "sportradar:eu_tournament",
+      "name": "Sportradar EU Soccer Tournament ID",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "sportradar:mlb_team",
+      "name": "Sportradar MLB Team",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "sportradar:nba_team",
+      "name": "Sportradar NBA Team",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "sportradar:ncaafb_team",
+      "name": "Sportradar NCAA Football Team",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "sportradar:ncaambb_team",
+      "name": "Sportradar NCAA Men's Basketball Team",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "sportradar:nfl_team",
+      "name": "Sportradar NFL Team",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "sportradar:us_soccer_team",
+      "name": "Sportradar North American Soccer Team",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "sportradar:us_tournament",
+      "name": "Sportradar US Soccer Tournament ID",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:country",
+      "name": "ISO 3166-1 Alpha-2 Country Code",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:cryptocurrency_code",
+      "name": "Cryptocurrency Code",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:currency_code",
+      "name": "Currency Code",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:iso_lang_code",
+      "name": "ISO 639-1 Language Code",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:mime_type",
+      "name": "Media (MIME) Type",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:stock_id",
+      "name": "Company Stock ID",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:timezone",
+      "name": "Timezone Identifier",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:us_state",
+      "name": "States in US",
+      "is_well_known": 0,
+      "has_ner_support": 1,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:contact",
+      "name": "Contact Identity",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:contact_name",
+      "name": "Contact Name",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:device",
+      "name": "Device Name",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:email_address",
+      "name": "Email Address",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:flow_token",
+      "name": "Flow Identifier",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:function",
+      "name": "Function Name",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:hashtag",
+      "name": "Hashtag",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:path_name",
+      "name": "Unix Path",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:phone_number",
+      "name": "Phone Number",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:picture",
+      "name": "Picture",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:program",
+      "name": "Program",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:url",
+      "name": "URL",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    },
+    {
+      "type": "tt:username",
+      "name": "Username",
+      "is_well_known": 1,
+      "has_ner_support": 0,
+      "subtype_of": null
+    }
+  ]
+}

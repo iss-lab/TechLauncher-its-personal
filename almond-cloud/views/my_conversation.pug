@@ -1,0 +1,15 @@
+extends layout
+include ./conversation_mixin
+
+block scripts
+  script(src=Config.ASSET_CDN + '/javascripts/conversation-bundle.js')
+
+block styles
+  link(rel='stylesheet', href=Config.ASSET_CDN + '/stylesheets/spinner.css')
+  link(rel='stylesheet', href=Config.ASSET_CDN + '/stylesheets/conversation.css')
+
+block page_name
+  = _("Web Genie")
+
+block content
+  +conversation_mixin('/me/ws/conversation')(class='single')

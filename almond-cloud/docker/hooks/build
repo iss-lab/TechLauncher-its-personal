@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+set -x
+echo "Running in $(pwd)"
+
+docker build -f $(basename $DOCKERFILE_PATH) -t $IMAGE_NAME ..

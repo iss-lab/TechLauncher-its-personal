@@ -1,0 +1,98 @@
+extends ../layout
+include ../conversation_mixin
+include ../register_mixins
+
+block styles
+  link(rel='stylesheet', href=Config.ASSET_CDN + '/stylesheets/index.css')
+  link(rel='stylesheet', href=Config.ASSET_CDN + '/stylesheets/app.css')
+  link(rel='stylesheet', href=Config.ASSET_CDN + '/stylesheets/spinner.css')
+  link(rel='stylesheet', href=Config.ASSET_CDN + '/stylesheets/conversation.css')
+
+block scripts
+  script(src=Config.ASSET_CDN + '/javascripts/commandpedia-bundle.js')
+  script(src=Config.ASSET_CDN + '/javascripts/index.js')
+  if ENABLE_ANONYMOUS_USER && !authenticated
+    script(src=Config.ASSET_CDN + '/javascripts/conversation-bundle.js')
+
+block page_name
+  - stdlayout = false;
+  = _("Genie")
+
+block content
+  if authenticated
+    div#cloud-id-holder(data-cloud-id=user.cloud_id, data-auth-token=user.auth_token)
+  else if ENABLE_ANONYMOUS_USER
+    div.modal.fade#try-almond-registration(role='dialog')
+      div.modal-dialog(role='document')
+        div.modal-content
+          div.modal-header
+            a.close(data-dismiss='modal', aria-label="Close")
+              span(aria-hidden='true') ×
+            h4.modal-title= _("Register for Genie")
+          div.modal-body
+            +registration_form(true)
+
+  div#page-body.head-home
+    section.divider.home-page#section-heading
+      div.container-fluid#almond-index-container
+        div.row
+          div.col-lg-12
+            h1#almond-title
+              img(src=Config.ASSET_CDN + '/images/logo.png',style='display:inline-block;padding-right:12px;height:1em;vertical-align:bottom')
+              = _("Genie")
+            h2#almond-subtitle= _("The Open, Privacy-Preserving Virtual Assistant")
+
+            p.text-center#almond-explanation-line
+              = _("Genie translates your commands into a personalized program.")
+
+            if authenticated
+              div.row
+                div.col-lg-4.col-lg-offset-4
+                  a(href='/me').btn.btn-primary.custom-btn.btn-block.call-to-action= _("Go To My Genie")
+            else if !ENABLE_ANONYMOUS_USER
+              div.row
+                div.col-lg-4.col-lg-offset-4
+                  a(href='/user/register').btn.btn-primary.custom-btn.btn-block.call-to-action= _("Try Genie Now")
+            else
+              div.row#try-almond-now-row
+                div.col-lg-4.col-lg-offset-4
+                  button#try-almond-now.btn.btn-primary.custom-btn.btn-block.call-to-action= _("Try Genie Now")
+
+              div.row.hidden#try-almond-now-conversation
+                div.col-lg-12
+                  +conversation_mixin('/me/ws/anonymous')(class='home',aria-expanded='false')
+
+    div.sections#home-page-sections
+      //-section.divider
+        h3= _("How Almond Works")
+
+        div.container
+          div.row
+            div.col-lg-12.marketing-video
+              iframe(style='max-width:100%;height: 653px;width: 100%;', src="https://www.youtube.com/embed/5JUtTe00yGc", frameborder="0", allow="autoplay;encrypted-media", allowfullscreen=true)
+
+              p.text-center= _("See how Genie helps Kimmy babysit.")
+
+      section.divider#inside-almond
+        h3= _("Inside Genie")
+        div.container
+          div.row
+            div(style='margin-top:1em;font-size:24px').text-center
+              div.row
+                div.col-xs-12.col-sm-6.col-md-4.col-md-offset-2
+                  a(href='/about/get-almond')= _("Get Genie")
+                div.col-xs-12.col-sm-6.col-md-4
+                  a(href='/about/get-involved')= _("Contribute To Genie")
+              div.row
+                div.col-xs-12.col-sm-6.col-md-4.col-md-offset-2
+                  a(href='https://forms.gle/Q1m5uZDF8ZyRbdSw7', rel='noopener')= _("Sign Up for Updates")
+                div.col-xs-12.col-sm-6.col-md-4
+                  a(href='https://community.almond.stanford.edu')= _("Join Our Community")
+
+      section.divider#section-commandpedia
+        h3= _("What can Genie do?")
+        div.container
+          div.row
+            div.col-xs-12.col-md-10.col-md-offset-1
+              p= _("Here is a sample of what Genie can do, and a few commands that our users and developers think are interesting. It is not an exhaustive list! Commands can combined in arbitrary ways, creating endless possibilities for your assistant.")
+          include ../commandpedia.pug

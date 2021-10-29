@@ -1,0 +1,118 @@
+branches:
+  except:
+  - "/^wip/"
+  - "/^dependabot/"
+language: go
+dist: bionic
+node_js: '12'
+go: 1.16.x
+python: '3.8'
+git:
+  depth: false
+addons:
+  mariadb: '10.2'
+cache:
+  timeout: 900
+  npm: true
+  pip: true
+services:
+  - docker
+
+stages:
+  - test
+  - name: deploy
+    if: type = push AND branch = master AND repo = stanford-oval/almond-cloud
+
+env:
+  global:
+  - TZ="America/Los_Angeles"
+  - COVERALLS_PARALLEL=true
+
+jobs:
+  include:
+    -
+      name: "Unit Tests"
+      install:
+      - nvm install 12
+      - travis_retry npm ci
+      script:
+      - npm run lint
+      - ./tests/check-migrations.sh
+      - npx nyc ts-node ./tests/unit
+      after_success: npm run coverage
+    -
+      name: "GO Unit Tests"
+      install:
+      - nvm install 12
+      - go get golang.org/x/tools/cmd/cover
+      - go get github.com/mattn/goveralls
+      before_script: cd go
+      script: go test -v -covermode=count -coverprofile=coverage.out ./...
+      after_success: $(go env GOPATH | awk 'BEGIN{FS=":"} {print $1}')/bin/goveralls -coverprofile=coverage.out -service=travis-ci
+    -
+      name: "Web Almond Integration Tests"
+      install:
+      - nvm install 12
+      - ./travis/install-webalmond-deps.sh
+      - travis_retry npm ci
+      - export PATH="`pwd`/geckodriver:$PATH"
+      script: npx nyc ./tests/webalmond-integration.sh
+      after_success: npm run coverage
+    -
+      name: "Thingpedia Integration Tests"
+      install:
+      - nvm install 12
+      - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
+      - curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash && chmod +x kustomize && sudo mv kustomize /usr/local/bin/
+      - go get sigs.k8s.io/kind
+      - go get golang.org/x/tools/cmd/cover
+      - go get github.com/mattn/goveralls
+      - travis_retry npm ci
+      - mkdir -p geckodriver/ && wget https://github.com/mozilla/geckodriver/releases/download/v0.22.0/geckodriver-v0.22.0-linux64.tar.gz && tar xvf geckodriver-v0.22.0-linux64.tar.gz -C geckodriver/
+      - export PATH="`pwd`/geckodriver:$PATH"
+      - ./tests/thingpedia-integration/setup-integration.sh
+      script: ./tests/thingpedia-integration/run-integration.sh
+      after_success:
+      - cat nyc_output | npx coveralls
+      - cd go
+      - export COVERALLS_SERVICE_JOB_ID=$((TRAVIS_JOB_ID+1))
+      - echo "go coverall $COVERALLS_SERVICE_JOB_ID nyc coverall $TRAVIS_JOB_ID"
+      - $(go env GOPATH | awk 'BEGIN{FS=":"} {print $1}')/bin/goveralls -coverprofile=../coverage.out -service=travis-ci
+    -
+      name: "Thingpedia Integration Go Coverall Job Id"
+      script: echo "go coverall will use this job id $TRAVIS_JOB_ID"
+    -
+      name: "NLP Integration Tests"
+      install:
+      - nvm install 12
+      - ./travis/install-webalmond-deps.sh
+      - travis_retry npm ci
+      - pyenv global 3.8.1
+      - ./tests/install-nlp-deps.sh
+      - export GENIENLP_EMBEDDINGS=`pwd`/tests/embeddings
+      - export PATH="`pwd`/geckodriver:$PATH"
+      script: npx nyc ./tests/nlp-integration.sh
+      after_success: npm run coverage
+    -
+      name: "Training Integration Tests"
+      install:
+      - nvm install 12
+      - ./travis/install-webalmond-deps.sh
+      - travis_retry npm ci
+      - pyenv global 3.8.1
+      - ./tests/install-nlp-deps.sh
+      - export GENIENLP_EMBEDDINGS=`pwd`/tests/embeddings
+      - export PATH="`pwd`/geckodriver:$PATH"
+      script: npx nyc ./tests/training-integration.sh
+      after_success: npm run coverage
+    -
+      stage: deploy
+      name: "Docker Build"
+      install:
+      - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      script: ./travis/docker-build.sh
+
+notifications:
+  webhooks: https://coveralls.io/webhook
+  slack:
+    secure: fGrI1C4upQI+TvN5AFq5Ncm37tlIEIAq39mZzP259fxxTJZVDrLL9RezzI4o17elCgROnRhOeuK75muAlDWKUK1vvVlG02y6G1qOTfG2paklLpxdGSdJHWyGOoMqv822bSpYpz+Us2hbgIoyRIjzE4QTPtAwUm+aNbQUQX5GLucBrwdkJqTUQVUSEZKjB8i8bl0ORODX2RHLWO1zuLTi/vT39DrFo2fD2yuZHNvgqDZIiIyt+9vPJPF/i1xZdh0/0XZSicAGMBBUS4FuxPWYW0ouR2Joup9jZHMmKZzgTJcPsJKpGU2feeCJebol5SWmgB1nAapfIG1WjSNUtgGKKA4BRpuhq/iZUiBE8dQrcQT2NWBES8MmPkw01xzAAALlsvL2snfVNw37WDCSezv3Ls1aT7ISDFyx29rulan0kqkcWH4e5xFY5g2TZKUPAvNeV6QfhP4RP+L+Eh72Dhk67esVTtdE7S+MX+Czq/nFeMQINPbmf+VzznHJEvEDlGT1qjz+11FxRLgtv+qbEk5UdUs3b56twLQNg3NxCQX53bjI1KRxOmf66+fl4y1DXhH5ka4m9jLoULI2hvpKLyHFg0Cky/ilTrOdfSRtSmaeshnJ3mD58CZry4xscKODwnLFz+yQdu04drto3+5sCNTNZTbxbZPY+an273kUXhXyh4w=

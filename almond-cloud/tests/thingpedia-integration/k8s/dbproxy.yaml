@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "dbproxy"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "dbproxy"
+  template:
+    metadata:
+      labels:
+        app: "dbproxy"
+    spec:
+      containers:
+      - name: "main"
+        image: localhost/almond-test:latest
+        imagePullPolicy: IfNotPresent
+        command: ["/bin/bash"]
+        args:
+        - -c
+        - |
+          set -x
+          cd /opt/almond-cloud/go
+          /usr/local/go/bin/go test -timeout 0 -coverpkg ./... -v -covermode=count -coverprofile=/home/almond-cloud/coverage.out ./backend/... &
+          wait $pid
+          while [ 1 ]; do sleep 100; done          
+        env:
+        - name: ENABLE_INTEGRATION
+          value: "true"
+        - name: INTEGRATION_ARGS
+          value: "dbproxy -port 8200" 
+        volumeMounts:
+        - mountPath: /etc/almond-cloud/config.d/config.yaml
+          subPath: config.yaml
+          name: almond-config
+          readOnly: true
+        ports:
+        - containerPort: 8200
+          name: web
+        resources:
+          requests:
+            memory: 100M
+      volumes:
+      - name: almond-config 
+        configMap:
+          name: almond-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dbproxy
+spec:
+  ports:
+  - port: 8200
+    protocol: TCP
+  selector:
+    app: dbproxy

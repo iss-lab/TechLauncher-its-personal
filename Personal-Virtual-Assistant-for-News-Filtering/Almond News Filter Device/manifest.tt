@@ -1,0 +1,91 @@
+// Copyright (c) 2021 Its Personal TechLauncher Team
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+class @org.itspersonal.newsfilter 
+#_[thingpedia_name="Its Personal News Filter"]
+#_[thingpedia_description="Filter news articles based on a selection of topics"]
+#_[canonical="itspersonalnewsfilter"]
+#[license="MIT"]
+#[license_gplcompatible=true]
+#[subcategory="service"]
+{
+
+  // tell the system this device uses customized js code
+  import loader from @org.thingpedia.v2();
+  import config from @org.thingpedia.config.none();
+
+  // article entity variable that is passed between functions
+  entity training_news_article #_[description="News Article on Its Personal News Filter"];
+  
+  /* 
+    The function to return the articles of a certain topic.
+    Example commands: "get tech articles"
+    Qualifiers: 
+      - list: if the query returns multiple results  
+  */
+  list query news_article(in req topic: Enum(sports, tech),
+                          out title: String,
+                          out link: Entity(tt:url),
+                          out description: String)
+  // confirmation sentence which will be prompted to the users before execution:
+  #_[confirmation="show news articles of the $topic topic"]
+  // the format of how the system will start presenting the output
+  #_[result={top="Here is the top news for today { |. ${title} ${description}}",
+            list="Here are the top news for today"}]
+  // the format of how the output will be presented to the users: 
+  #_[formatted=[{
+      type="rdl",
+      webCallback="${link}",
+      displayTitle="${title}",
+      displayText="${description}"
+    }]] 
+  #[doc="get news articles of a certain topic"];
+
+  /* 
+    The function to return a random article to mark as relevant/irrelevant for training dataset.
+    Example commands: "get random training article"  
+  */
+  list query training_news_article(in req topic: Enum(sports, tech),
+                              out id: Entity(org.itspersonal.newsfilter:training_news_article),
+                              out title: String,
+                              out link: Entity(tt:url),
+                              out description: String)
+  // confirmation sentence which will be prompted to the users before execution:
+  #_[confirmation="add training data for $topic topic"]
+  // the format of how the system will start presenting the output
+  #_[result=["Here is a random article { |. ${title} ${description}}"]]
+  // the format of how the output will be presented to the users: 
+  #_[formatted=[{
+      type="rdl",
+      webCallback="${link}",
+      displayTitle="${title}",
+      displayText="${description}"
+    }]] 
+  #[doc="get a random news article for training a certain topic"];
+
+  /* 
+    The function to add a relevant/irrelevant news article for the training dataset.
+    Example commands: "mark training article as relevant/irrelevant"
+  */
+  action mark_training_news_article(in req id: Entity(org.itspersonal.newsfilter:training_news_article),
+                                    in req relevant: Boolean #_[prompt="Is this article relevant to the topic?"])
+  // confirmation sentence which will be prompted to the users before execution:
+  #[confirm=false]
+  #[doc="label a news article and add it to the training dataset of a certain topic"];
+}
